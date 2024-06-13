@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "server": "nodemon server.js",
-    "build": "npm install --prefix ./frontend && npm run build --prefix ./frontend && npm install",
+    "build": "npm install  && npm install --prefix frontend && npm run build --prefix frontend ",
     "frontend": "npm start --prefix ./frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\""
   },
