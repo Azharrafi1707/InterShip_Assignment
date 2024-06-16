@@ -20,7 +20,6 @@ const Spinner = ({path="login"}) => {
         return ()=>clearInterval(interval);
         
     },[count,Navigate,location,path]);
-    // console.log(location);
 
     return (
         <>

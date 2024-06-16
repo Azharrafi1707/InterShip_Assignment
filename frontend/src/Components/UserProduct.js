@@ -18,7 +18,6 @@ const Products = () => {
     };
     const deleteProduct=async (e)=>{
         try{
-            // console.log(e.target.value);
             const {data}=await axios.delete(`/api/v1/product/delete-product/${e.target.value}`);
             getAllProducts()
         }
@@ -30,7 +29,7 @@ const Products = () => {
     //lifecycle method
     useEffect(() => {
         getAllProducts();
-    }, []);
+    }, [getAllProducts()]);
     return (
         <Layout>
             <div className="row">

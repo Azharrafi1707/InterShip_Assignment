@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import Layout from "../Layout.jsx"
 import Axios from "axios"
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import "../../index.css"
 import { AuthContext } from "../../context/auth.js";
 
@@ -10,7 +10,6 @@ const Login = () => {
     const [email, setemail] = useState("");
     const [password, setPassword] = useState("");
     const Navigate = useNavigate();
-    const location = useLocation();
     const [auth, setauth] = useContext(AuthContext);
     const submitHandler = async (e) => {
         e.preventDefault();
@@ -25,13 +24,13 @@ const Login = () => {
                     token: res.data.token
                 })
                 localStorage.setItem("auth", JSON.stringify(res.data))
-                // console.log(location);
+
                 Navigate( "/");
             }
         }
         catch (err) {
             Navigate("/register")
-            console.log(err);
+            // console.log(err);
         }
     }
 

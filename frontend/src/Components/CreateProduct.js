@@ -24,13 +24,10 @@ const CreateProduct = () => {
       productData.append("quantity", quantity);
       productData.append("photo", photo);
       productData.append("CreatedBy", CreatedBy);
-      // console.log(productData.get("category"));
       const { data } = await axios.post(
         "/api/v1/product/create-product",
         productData
       );
-      
-      // console.log(data?.success);
       if (data?.success) {
         navigate("/");
       } else {

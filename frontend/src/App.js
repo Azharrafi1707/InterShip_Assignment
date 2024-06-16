@@ -8,8 +8,6 @@ import Product from "./Components/UserProduct.js";
 import ReferedUser from "./Components/ReferedUser.js";
 import Referal_User from "./Components/Referal_User.js";
 import PrivateRoute from "./Routes/Private.js";
-
-
 function App() {
   return (
     <>
@@ -24,7 +22,6 @@ function App() {
         <Route path="/register" element={<Register/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="*" element={<Pagenotfound/>} />
-
       </Routes>
     </>
   );

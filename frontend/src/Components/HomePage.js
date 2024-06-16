@@ -1,6 +1,5 @@
 import React,{useContext} from 'react'
 import { AuthContext } from '../context/auth'
-import { json } from 'react-router-dom';
 import Layout from './Layout';
 
 const HomePage = () => {

@@ -23,12 +23,10 @@ const Register = () => {
                     alert(`${res?.data?.message}`)
                 }
                 Navigate("/login");
-                // console.log("shi chal raha");
             }
         }
         catch(err){
             console.log(err);
-            // console.log("nhi chal raha");
         }
     }
     return (
